@@ -40,8 +40,16 @@ INSERT INTO enclosure (name, capacity, closed_for_maintenance) VALUES ('Penguin 
 INSERT INTO enclosure (name, capacity, closed_for_maintenance) VALUES ('Zebra Enclosure', 1, FALSE);
 
 INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Alex', 'Lion', 23, 1);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Simba', 'Lion', 15, 1);
 INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Skipper', 'Penguin', 16, 2);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Rico', 'Penguin', 14, 2);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Marty', 'Zebra', 42,3);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Brian', 'Zebra', 55,3);
+
+
+
 
 INSERT INTO assignment (day, employee_id, enclosure_id) VALUES ('Monday', 2, 2);
 INSERT INTO assignment (day, employee_id, enclosure_id) VALUES ('Monday', 1, 1);
 INSERT INTO assignment (day, employee_id, enclosure_id) VALUES ('Monday', 3, 3);
+
