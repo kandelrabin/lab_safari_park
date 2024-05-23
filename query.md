@@ -66,3 +66,11 @@ ON enclosure.id  = assignment.enclosure_id
 GROUP BY enclosure.name;
 
 ````
+
+The names of the other animals sharing an enclosure with a given animal (eg. find the names of all the animals sharing the big cat field with Tony)
+
+````sql
+
+
+
+````
