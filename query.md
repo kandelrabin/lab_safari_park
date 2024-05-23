@@ -5,8 +5,8 @@ SELECT animal.name
 FROM animal
 INNER JOIN enclosure 
 ON animal.enclosure_id = enclosure.id
-WHERE enclosure.name = 'Lion Enclosure'
-;
+WHERE enclosure.name = 'Lion Enclosure';
+
 ````
 
 The names of the staff working in a given enclosure
@@ -17,6 +17,7 @@ ON staff.id = assignment.employee_id
 INNER JOIN enclosure
 ON assignment.enclosure_id = enclosure.id
 WHERE enclosure.name = 'Zebra Enclosure';
+
 ````
 
 The names of staff working in enclosures which are closed for maintenance
@@ -27,6 +28,7 @@ ON staff.id = assignment.employee_id
 INNER JOIN enclosure
 ON assignment.enclosure_id = enclosure.id
 WHERE enclosure.closed_for_maintenance = TRUE;
+
 ````
 
 The name of the enclosure where the oldest animal lives. If there are two animals who are the same age choose the first one alphabetically.
@@ -36,6 +38,7 @@ INNER JOIN animal
 ON enclosure.id = animal.enclosure_id
 WHERE animal.age = (SELECT MAX(age) FROM animal)
 ORDER BY animal.name LIMIT 1;
+
 ````
 
 
@@ -48,8 +51,18 @@ INNER JOIN enclosure ON animal.enclosure_id = enclosure.id
 INNER JOIN assignment ON enclosure.id = assignment.enclosure_id
 INNER JOIN staff ON assignment.employee_id = staff.id
 WHERE staff.name = 'Zuhair'
-GROUP BY staff.name
-;
+GROUP BY staff.name;
  
+````
+
+The number of different keepers who have been assigned to work in a given enclosure
+
+````sql
+SELECT COUNT(DISTINCT staff.name), enclosure.name FROM staff
+INNER JOIN assignment
+ON staff.id = assignment.employee_id
+INNER JOIN enclosure
+ON enclosure.id  = assignment.enclosure_id
+GROUP BY enclosure.name;
 
 ````
