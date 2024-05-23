@@ -52,4 +52,5 @@ INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Brian', 'Zebra', 42,
 INSERT INTO assignment (day, employee_id, enclosure_id) VALUES ('Monday', 2, 2);
 INSERT INTO assignment (day, employee_id, enclosure_id) VALUES ('Monday', 1, 1);
 INSERT INTO assignment (day, employee_id, enclosure_id) VALUES ('Monday', 3, 3);
+INSERT INTO assignment (day, employee_id, enclosure_id) VALUES ('Tuesday', 2, 1);
 

@@ -37,3 +37,19 @@ ON enclosure.id = animal.enclosure_id
 WHERE animal.age = (SELECT MAX(age) FROM animal)
 ORDER BY animal.name LIMIT 1;
 ````
+
+
+The number of different animal types a given keeper has been assigned to work with.
+
+````sql
+SELECT COUNT (DISTINCT animal.type), staff.name
+FROM animal
+INNER JOIN enclosure ON animal.enclosure_id = enclosure.id
+INNER JOIN assignment ON enclosure.id = assignment.enclosure_id
+INNER JOIN staff ON assignment.employee_id = staff.id
+WHERE staff.name = 'Zuhair'
+GROUP BY staff.name
+;
+ 
+
+````
