@@ -44,7 +44,7 @@ INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Simba', 'Lion', 15, 
 INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Skipper', 'Penguin', 16, 2);
 INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Rico', 'Penguin', 14, 2);
 INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Marty', 'Zebra', 42,3);
-INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Brian', 'Zebra', 55,3);
+INSERT INTO animal (name, type, age, enclosure_id) VALUES ('Brian', 'Zebra', 42,3);
 
 
 
